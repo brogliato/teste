@@ -1,0 +1,54 @@
+@media screen and ( max-width: 992px )
+  html
+    font-size: 1.1vw
+  .header-menu
+    position: fixed
+    display: flex
+    flex-direction: column
+    right: 0
+    top: 0
+    height: 100%
+    align-items: center
+    justify-content: flex-start
+    padding-top: 5rem
+    padding: 3rem
+    transform: translate(100%, 0px)
+    padding-top: 10rem
+    &.active
+      transform: translate(0%, 0px)
+  .header-menu__item
+    height: auto
+    display: flex
+    width: 100%
+  .header-menu::after
+    content: none
+  .header-menu::before
+    width: 100%
+  .header-nav
+    display: flex
+    align-items: center
+    padding-top: 2rem
+  .toggleMobile
+    display: flex
+  .header-menu__link
+    width: 100%
+    display: flex
+    justify-content: center
+  .collapse-top h2
+    white-space: inherit
+  .header-btn
+    border-radius: .6rem
+
+@media screen and ( max-width: 768px )
+  html
+    font-size: 1.2vw
+@media screen and ( max-width: 562px )
+  html
+    font-size: 4vw
+  .container-2
+    display: block
+    padding-left: 8vw
+    padding-right: 8vw
+
+  .banner-desc p
+    width: 100%

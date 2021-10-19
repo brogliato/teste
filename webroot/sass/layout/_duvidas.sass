@@ -1,0 +1,33 @@
+.duvidas
+    position: relative
+    width: 100%
+    background-color: #f1f1f1
+    padding: 3rem 0
+.collapse
+    &-top
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+        h2
+            white-space: nowrap
+        img
+            display: block
+            width: 1.7rem
+    + .collapse
+        margin-top: 3rem
+    &-bottom
+        position: relative
+        margin-top: 1rem
+        display: none
+    &.active
+        .collapse-bottom
+            display: block
+
+.line
+    width: 70%
+    height: 1px
+    background: #ccc
+.active img
+    transform: rotate(180deg)

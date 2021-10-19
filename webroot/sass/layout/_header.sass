@@ -1,0 +1,127 @@
+header
+    position: fixed
+    width: 100%
+    z-index: 1
+.header
+    position: relative
+    &-nav
+        display: flex
+        flex-direction: row
+        width: 100%
+        justify-content: space-between
+    &-icon
+        display: block
+        height: 1.5rem
+    &-menu
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 1.5rem
+        padding: 1.5rem 0
+        position: relative
+        &__item
+            height: 100%
+            display: flex
+        &__link
+            display: flex
+            flex-direction: row
+            align-items: center
+            gap: 0.5rem
+            padding: 0.7rem 2rem
+            border-radius: 9999px
+            color: #fff
+            text-transform: uppercase
+            font-weight: 500
+            font-size: 1rem
+        &::before, &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            background: $cor-3
+            z-index: -1
+            width: 85%
+            border-radius: 0 0 5rem
+            transition: all .5s ease
+        &::after
+            content: ''
+            right: 100%
+            left: unset
+            border-radius: 0
+    &-btn
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 0.5rem
+        padding: 0.7rem 2rem
+        border-radius: 0 0 0.6rem 0.6rem
+        color: #fff
+        text-transform: uppercase
+        font-weight: 500
+        background-color: $cor-1
+        font-size: 1rem
+
+.active .header-menu::before
+    width: 200%
+    transition: all 1s ease
+
+.btn
+    &--1
+        background-color: $cor-1
+        &:hover
+            background: #f8bf20
+
+    &--2
+        background-color: $cor-2
+        &:hover
+            background: #612092
+
+    &--3
+        background-color: $cor-4
+        &:hover
+            background: #099cb9
+
+.toggleMobile
+    height: 1.1rem
+    width: 2.5rem
+    position: relative
+    border-top: 3px solid $cor-1
+    display: none
+    cursor: pointer
+    &::before
+        content: ''
+        position: absolute
+        top: 50%
+        height: 3px
+        background: $cor-1
+        width: 100%
+        transform: translate(0px, -50%)
+    &::after
+        content: ''
+        position: absolute
+        top: 100%
+        height: 3px
+        background: $cor-1
+        width: 100%
+    &.active
+        border: none
+        &::before
+            transform: rotate(45deg) translate(0px, -50%)
+        &::after
+            transform: rotate(315deg) translate(0px, -50%)
+            margin-top: -9px
+
+.fancyMobile
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: transparentize(#000, .6)
+    transform: translate(100%, 0px)
+    z-index: -1
+
+    &.active
+        transform: translate(0px, 0px)
+        transition: all .6s ease
